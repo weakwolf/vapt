@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 4.0)
 
 project(audio_process_tool)
 
-# get operate system
+set(CMAKE_CXX_STANDARD 11)
+
 if(UNIX)
     set(PLATFORM unix)
 else()
@@ -17,16 +18,15 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8)
 else()
     set(ARC x86)
 endif()
-# set build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE DEBUG)
 endif()
 
 message(STATUS "PLATFORM: ${PLATFORM}")
 message(STATUS "ARC: ${ARC}")
+message(STATUS "C++ VERSION:${CMAKE_CXX_STANDARD}")
 message(STATUS "BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
-# create output directory
-set(OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin_${PLATFORM}_${ARC}/${CMAKE_BUILD_TYPE})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin_${PLATFORM}_${ARC}/${CMAKE_BUILD_TYPE})
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/wave_muxer)
