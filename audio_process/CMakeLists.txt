@@ -9,4 +9,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_BASIC_FLAGS} -fvisibility=hidden -fPIC")
 
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
 
-add_library(audioprocess SHARED ${SRC_LIST})
+add_library(audioproc SHARED ${SRC_LIST})
