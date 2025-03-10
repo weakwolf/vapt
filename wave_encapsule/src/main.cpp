@@ -28,7 +28,7 @@ int main(int argc,char* argv[])
         if(0 == strcmp(argv[1],"-h"))
         {
             std::cout<<"-v show the version infomation"<<std::endl;
-            std::cout<<"format:wave_muxer [path_in] [path_out] [sample_rate] [channel_count] [sample_depth] [audio_format]"<<std::endl;
+            std::cout<<"format:wavcaps [path_in] [path_out] [sample_rate] [channel_count] [sample_depth] [audio_format]"<<std::endl;
         }
         else if(0 == strcmp(argv[1],"-v"))
         {
