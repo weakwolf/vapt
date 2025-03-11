@@ -8,4 +8,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden -fPIC")
 
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
 
-add_library(videoprocess SHARED ${SRC_LIST})
+add_library(videoproc SHARED ${SRC_LIST})

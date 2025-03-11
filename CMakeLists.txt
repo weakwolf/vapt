@@ -36,3 +36,4 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LIB_OUTPUT_PATH})
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/wave_encapsule)
 add_subdirectory(${PROJECT_SOURCE_DIR}/audio_process)
+add_subdirectory(${PROJECT_SOURCE_DIR}/video_process)
