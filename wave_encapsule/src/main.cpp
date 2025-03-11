@@ -4,6 +4,7 @@
 #include <cstdlib>
 
 #include "AudioProcessor.h"
+#include "../include/LocalDefine.h"
 #include "GlobalDefine.h"
 
 int main(int argc,char* argv[])
