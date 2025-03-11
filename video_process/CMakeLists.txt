@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 4.0)
 
-project(audio_process)
+project(video_process)
 
 # export flags
-add_definitions(-DAUDIO_PROCESS_EXPORT)
+add_definitions(-DVIDEO_PROCESS_EXPORT)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden -fPIC")
 
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
 
-add_library(audioproc SHARED ${SRC_LIST})
+add_library(videoprocess SHARED ${SRC_LIST})

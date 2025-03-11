@@ -27,11 +27,6 @@ message(STATUS "ARC: ${ARC}")
 message(STATUS "C++ VERSION:${CMAKE_CXX_STANDARD}")
 message(STATUS "BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
-# the base cxx compile flags
-set(CMAKE_CXX_BASIC_FLAGS ${CMAKE_CXX_FLAGS})
-# control dynamic library export
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_BASIC_FLAGS} -fvisibility=hidden")
-
 set(BIN_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin_${PLATFORM}_${ARC}/${CMAKE_BUILD_TYPE})
 set(LIB_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib_${PLATFORM}_${ARC}/${CMAKE_BUILD_TYPE})
 

@@ -2,8 +2,8 @@
  * some functions for audio data process
  */
 
-#ifndef AUDIO_PROCESSOR_H
-#define AUDIO_PROCESSOR_H
+#ifndef AUDIO_PROCESS_H
+#define AUDIO_PROCESS_H
 
 #if defined(_WIN32) || defined(_WIN64)
     #ifdef AUDIO_PROCESS_EXPORT
@@ -32,7 +32,7 @@
  * @param nChannels     channel count
  * @param nSampleDeep   bits of a sample
  * @param nAudioFormat  audio format, the default is 1(pcm)
- * @return              0 is failed, 1 is succeed
+ * @return              -1 is failed, 0 is succeed
  */
 AUDIO_PROCESS_API int EncapsuleToWave(const std::string& szInputPath,const std::string& szOutputPath,
     int nSampleRate,int nChannels,int nSampleDeep,int nAudioFormat = 1);
