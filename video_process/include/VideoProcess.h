@@ -36,5 +36,25 @@
   */
  VIDEO_PROCESS_API int SplitYUV420P(const std::string& szInput,const std::string& szOutY,const std::string& szOutU,
     const std::string& szOutV,int nWidth,int nHeight);
+/**
+ * @param szInput   rgb file input path
+ * @param szOutR    r data output path
+ * @param szOutG    g data output path
+ * @param szOutB    b data output path
+ * @param nWidth    the width of rgb picture
+ * @param nHeight   the height of rgb picture
+ * @return          -1 is failed, 0 is succeed
+ */
+VIDEO_PROCESS_API int SplitRGB(const std::string& szInput,const std::string& szOutR,const std::string& szOutG,
+        const std::string& szOutB,int nWidth,int nHeight);
+    
+/**
+ * transform yuv420p into rgb
+ * 
+ * @param szInput   yuv420p file path
+ * @param szOut     rgb file outout path
+ * @return          -1 is failed,0 is succeed
+ */
+VIDEO_PROCESS_API int YUV420P2RGB(const std::string& szInput,const std::string& szOut);
 
 #endif

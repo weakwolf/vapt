@@ -34,3 +34,30 @@
 
     return 0;
 }
+int SplitRGB(const std::string& szInput,const std::string& szOutR,const std::string& szOutG,
+    const std::string& szOutB,int nWidth,int nHeight)
+{
+    FILE* pIn = fopen(szInput.c_str(),"rb");
+    if(nullptr == pIn) return -1;
+    FILE* pOutR = fopen(szOutR.c_str(),"wb+");
+    if(nullptr == pOutR) return -1;
+    FILE* pOutG = fopen(szOutB.c_str(),"wb+");
+    if(nullptr == pOutG) return -1;
+    FILE* pOutB = fopen(szOutB.c_str(),"wb+");
+    if(nullptr == pOutB) return -1;
+
+    unsigned char* pBuf = (unsigned char*)malloc(nWidth * nHeight * 3);
+    int nSize = nWidth * nHeight;
+    fread(pBuf,1,nSize * 3,pIn);
+    fwrite(pBuf,1,nSize,pOutR);
+    fwrite(pBuf + nSize,1,nSize,pOutG);
+    fwrite(pBuf+2 * nSize,1,nSize,pOutB);
+
+    free(pBuf);
+    fclose(pIn);
+    fclose(pOutB);
+    fclose(pOutG);
+    fclose(pOutR);
+
+    return 0;
+}
